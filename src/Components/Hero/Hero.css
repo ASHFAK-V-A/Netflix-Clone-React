@@ -1,0 +1,58 @@
+
+.header-content{
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+    
+    }
+    
+    .header-content h1{
+        font-size: 50px;
+        line-height: 70px;
+        max-width:650px ;
+        font-weight: 600;
+        letter-spacing:3px;
+    }
+    
+    .header-content  h3{
+        font-weight: 200;
+        margin-bottom:20px ;
+         letter-spacing:2px;
+       
+    }
+    
+    
+    .header-content p{
+        letter-spacing:1px;
+    }
+    
+    
+    .emai-signup{
+        background: #fff;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        overflow: hidden;
+    }
+    
+    .emai-signup input{
+        flex: 1;
+        border: 0;
+        outline: 0;
+        margin-left: 20px;
+    }
+    
+    .emai-signup button{
+        background: #db0001;
+        border: 0;
+        outline: 0;
+        color: #fff;
+        font-size:16px;
+        cursor: pointer;
+        padding: 15px 30px;
+    
+    }
