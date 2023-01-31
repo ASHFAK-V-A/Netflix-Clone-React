@@ -1,7 +1,8 @@
 
 import React, { useEffect, useState } from 'react'
+
 import "./RowPost.css"
-import { API_KEY,imageUrl} from '../../constants/constants'
+import { imageUrl} from '../../constants/constants'
 import axios from '../../axios.'
 
 
@@ -11,13 +12,11 @@ function RowPost(props) {
 
 const [movies,setMovies]=useState([])
 
-console.log(imageUrl);
-
 
 
 
   useEffect(()=>{
-axios.get(`discover/tv?api_key=${API_KEY}&with_networks=213`).then(responseon=>{
+axios.get(props.url).then(responseon=>{
 setMovies(responseon.data.results)
 
 }).catch((err)=>{
@@ -25,6 +24,10 @@ setMovies(responseon.data.results)
 })
 
   },[])
+
+  
+
+ 
   return (
     <div className='row'>
         <section>
@@ -43,8 +46,9 @@ Popular on Netflix</h3>
       <div className='cards'>
 {movies.map((item)=>
   <img className={props.isSmall ?'smallPoster ':'posters'} src={`${imageUrl+item.backdrop_path}`} alt="" />
-)}
+)}    
       </div>
+
     </div>
   )
 }
